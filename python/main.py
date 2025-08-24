@@ -20,3 +20,5 @@ class CountingClicker:
 a = CountingClicker()
 print(a)
 print(a.click().click().read())
+
+assert a.read() == 3
