@@ -1,12 +1,21 @@
 from matplotlib import pyplot as plt
 
-years = [1950, 1960, 1970, 2000, 2010]
-gdp   = [300, 543.3, 1075, 2322, 12044]
+# years    = [2010, 2020, 2030, 2040, 2050]
+# students = [1000, 1300, 2300, 3000, 1200]
 
-plt.plot(years, gdp, color="green", marker="o", linestyle="solid")
+# plt.bar(years, students)
 
-plt.title("my line chart")
+# plt.title("Yillar bo'yicha talaba bo'lgan abiturentlar")
 
-plt.ylabel("Billions of $")
+# plt.ylabel("talabalar soni")
+# plt.xlabel("yillar")
+
+# plt.show()
+
+year      = [2010, 2020, 2030]
+downloads = [230, 22, 123]
+average = [(x + y) / y for x, y in zip(year, downloads)]
+
+plt.plot(year, downloads, 'r-.', label='year+downloads')
 
 plt.show()
