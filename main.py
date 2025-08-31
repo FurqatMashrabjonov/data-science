@@ -1,8 +1,14 @@
 import math
 
-# s = (lambda a, b : a + b)(234, 4324)
-# print(s)
+def square(function):
+    def wrapper(a, b):
+        _sum = function(a, b)
+        return math.pow(_sum, 2)
 
-s = lambda a, func: a + func(a)
+    return wrapper
 
-print(s(12, lambda a: int(math.pow(a, 2))))
+@square
+def summa(a, b):
+    return a + b
+
+print(summa(2, 3))
